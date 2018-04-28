@@ -1,21 +1,24 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div id="container">
-		<header id="header" >
-			<header-comp></header-comp>
+		<header id="header" class="white" >
+			<div class="title">
+				<h3>CROSSMAKER</h3>
+			</div>
 		</header>
-		<section name="pic_load" id="pic_load">
-			<pic-load-form></pic-load-form>
-		</section>
-		<section name="client_room" id="client_room">
-		
-		</section>
-		<section name="pic_get" id="pic_get">
-		
-		</section>
-		<section name="chat" id="chat">
-		
-		</section>
-		<footer id="footer">
+		<section name="left" id="left" class="white">
+			<div class="menu">
+				<h3>Menu</h3>
+					<ul>
+   						<li><a routerLink="/main">Main</a></li>
+						<li><a>Gallery</a></li>
+						<li><a routerLink="/chat">Chat</a></li>
+					 </ul>
+				</div>
+			</section>
+			<section name="content" id="content" class="white">
+				<router-outlet></router-outlet>
+			</section>
+		<footer id="footer" class="white">
 		
 		</footer>
 </div>

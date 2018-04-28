@@ -1,40 +1,69 @@
 #container{
-	background:#99CC99;
     margin: 30px auto;
     width: 1000px;
 }
 #header{
-	background: #66CCCC;
     height: 100px;
     width: 100%;
 }
-#pic_load{
+#left{
 	float: left;
-    width: 50%;
-    height: 500px;
-    background-color: blue;
+  width: 30%;
+  height: 100%;
 }
-#client_room{
+#content{
 	float: right;
-	width: 50%;
-    height: 500px;
-    background-color: pink;
-}
-#pic_get{
-	float: left;
-    width: 50%;
-    height: 500px;
-    background-color: brown;
-}
-#chat{
-	float: right;
-	width: 50%;
-    height: 500px;
-    background-color: black;
+	width: 70%;
 }
 #footer{
-	float: left;
-	width: 100%;
-	height: 100px;
-	background-color: green;
+  float: left;
+  width: 100%;
+  height: 100px;
+}
+.white{
+  background-image: none;
+  background-color: white;
+}
+.title h3 {
+  display: table;
+  width: auto;
+  margin: 0 auto;
+  padding: 15px;
+  letter-spacing: 2px;
+  border: 2px solid #cbdcea;
+  color: #66CDAA;
+}
+.menu {
+  padding: 15px;
+  background: white;
+  width: 200px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,.1);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.menu h3 {
+  font-size: 16px;
+  color: rgba(0,0,0,.6);
+  margin: 0 0 10px;
+  padding: 0 5px;
+  position: relative;
+}
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; 
+  border-top: 1px solid rgba(0,0,0,.3);
+}
+.menu li {margin: 12px 0 0 0px;}
+.menu a {
+  text-decoration: none;
+  display: block;  
+  font-size: 13px;
+  color: rgba(0,0,0,.6);
+  padding: 5px;
+  position: relative;
+  transition: .3s linear;
+}
+.menu a:hover {
+  background: #66CDAA;
+  color: white;
 }

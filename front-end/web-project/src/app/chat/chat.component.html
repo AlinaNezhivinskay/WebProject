@@ -1,0 +1,38 @@
+<h3>Chat</h3>
+<div>
+	<div id="chat">
+		 <table class="message">
+    		<tr *ngFor="let message of messages">
+      			<td>
+      				<img src="./assets/user.ico">
+      			</td>
+      			<td>
+      				{{message.user}}
+      			</td>
+      			<td>
+      				{{message.date}}
+      			</td>
+      			<td>
+      				{{message.text}}
+      			</td>
+    		</tr>
+    		<tr>
+      			<td>
+      				<img src="./assets/user.ico">
+      			</td>
+      			<td>
+      				Alina
+      			</td>
+      			<td>
+      				28.04.2018 21:53
+      			</td>
+      			<td>
+      				Hi!!! I am Alina!!!
+      			</td>
+    		</tr>
+  </table>
+</div>
+	<textarea id="box"></textarea>
+	<button id="send" (click)="add(box.value); box.value=''">Send</button>
+</div>
+

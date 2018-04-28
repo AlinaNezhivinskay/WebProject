@@ -1,0 +1,36 @@
+#chat{
+width:100%; /* фиксированная ширина */
+height:300px; /* фиксированная высота */
+border:1px solid #555; padding:4px; margin:4px; float:left;
+overflow:auto;
+}
+#box{
+width:500px; /* фиксированная ширина */
+height:50px; /* фиксированная высота */
+border:1px solid #555; padding:4px; margin:4px; float:left;
+}
+#send{
+width:100px; /* фиксированная ширина */
+height:50px; /* фиксированная высота */
+}
+.message {
+border-spacing: 0 10px;
+font-family: 'Open Sans', sans-serif;
+font-weight: bold;
+}
+.message td {
+vertical-align: middle;
+padding: 10px;
+font-size: 14px;
+text-align: center;
+border-top: 2px solid #56433D;
+border-bottom: 2px solid #56433D;
+border-right: 2px solid #56433D;
+}
+.message td:first-child {
+border-left: 2px solid #56433D;
+border-right: none;
+}
+.message td:nth-child(2){
+text-align: left;
+}
