@@ -1,24 +1,29 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div id="container">
-		<header id="header" class="white" >
+<div class="container" >
+	<div class="row justify-content-md-center">
+		<header id="header" >
 			<div class="title">
-				<h3>CROSSMAKER</h3>
+				<h3>CROSSMAKER</h3><br>
 			</div>
 		</header>
-		<section name="left" id="left" class="white">
+    <div class="col col-lg-3">
+      <section id="menu">
 			<div class="menu">
 				<h3>Menu</h3>
 					<ul>
    						<li><a routerLink="/main">Main</a></li>
-						<li><a>Gallery</a></li>
+						<li><a routerLink="/gallery">Gallery</a></li>
 						<li><a routerLink="/chat">Chat</a></li>
 					 </ul>
 				</div>
 			</section>
-			<section name="content" id="content" class="white">
+    </div>
+    <div class="col col-lg-6">
+     	<section id="content">
 				<router-outlet></router-outlet>
 			</section>
-		<footer id="footer" class="white">
-		
-		</footer>
+    </div>
+    </div>
+    <footer id="footer" class="col">
+	</footer>
 </div>

@@ -1,28 +1,6 @@
-#container{
-    margin: 30px auto;
-    width: 1000px;
-}
-#header{
-    height: 100px;
-    width: 100%;
-}
-#left{
-	float: left;
-  width: 30%;
-  height: 100%;
-}
-#content{
-	float: right;
-	width: 70%;
-}
-#footer{
-  float: left;
-  width: 100%;
-  height: 100px;
-}
-.white{
-  background-image: none;
-  background-color: white;
+.container{
+   background-color: white;
+   min-height: 800px;
 }
 .title h3 {
   display: table;

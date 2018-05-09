@@ -9,8 +9,10 @@ import { ChatService } from '../service/chat.service';
   styleUrls: ['./chat.component.css']
 })
 export class ChatComponent {
-   messages:Object[];
+   messages:Message[];
    constructor(private chatService: ChatService) { }
+
+   message:Message=new Message();
 
   ngOnInit() {
     this.getMessages();
@@ -18,15 +20,21 @@ export class ChatComponent {
 
   getMessages(): void {
     this.chatService.getMessages()
-    .subscribe(messages => this.messages = messages);
+    .subscribe(messages => this.messages = messages as Message[]);
   }
 
-  add(user: string, message:number,date:Date): void {
-    user = user.trim();
-    if (!user) { return; }
-    this.chatService.addMessage({ user,message,date } as Object)
+  addMessage(): void {
+    /*this.chatService.addMessage(message)
       .subscribe(message => {
-        this.messages.push(message);
-      });
+        this.messages.push(message as Message);
+      });*/
+     this.messages.push(this.message);
   }
+}
+
+class Message {
+  id:number;
+  userName:string;
+  message:string;
+  date:Date;
 }

@@ -34,9 +34,7 @@ export class MainComponent {
             //Если нет файла, то слать как обычный JSON
             final_data = this.form;
         }
-       // this.http.post('/api/form', final_data).map((response: Response) => response.json()).subscribe(resp => {
-       
-        })
+       // this.http.post('/api/form', final_data).map((response: Response) => response.json()).subscribe(resp => {})
     }
 }
 

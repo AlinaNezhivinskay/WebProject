@@ -1,0 +1,21 @@
+<h2>Gallery</h2>
+	<div>
+		<label>Category:</label>
+		 <select>
+    	<option>
+    		Animal
+    	</option>
+    </select>
+	</div><br>
+	<table class="gallery">
+  			<td *ngFor="let picture of pictures">
+  				<a routerLink="/picture_detail/{{picture.id}}">
+  					<img src="data:image/jpg;base64,{{picture.image}}">	
+				</a>
+  			</td>
+  			<td>
+  				<a routerLink="/picture_detail/{{picture.id}}">
+  					<img src="data:image/jpg;base64,{{picture.image}}">	
+				</a>
+  			</td>
+	</table>

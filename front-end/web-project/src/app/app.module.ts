@@ -9,8 +9,10 @@ import { AppComponent } from './app.component';
 
 import { MainComponent }         from './main/main.component';
 import { ChatComponent }         from './chat/chat.component';
+import { GalleryComponent }   from './gallery/gallery.component';
 
 import { ChatService } from './service/chat.service';
+import { GalleryService } from './service/gallery.service';
 
 
 
@@ -18,7 +20,8 @@ import { ChatService } from './service/chat.service';
   declarations: [
     AppComponent,
     MainComponent,
-    ChatComponent
+    ChatComponent,
+    GalleryComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +29,7 @@ import { ChatService } from './service/chat.service';
     AppRoutingModule,
     HttpClientModule,
   ],
-  providers: [ChatService],
+  providers: [ChatService,GalleryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

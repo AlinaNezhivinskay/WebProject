@@ -1,38 +1,31 @@
-<h3>Chat</h3>
-<div>
-	<div id="chat">
-		 <table class="message">
-    		<tr *ngFor="let message of messages">
-      			<td>
-      				<img src="./assets/user.ico">
-      			</td>
-      			<td>
-      				{{message.user}}
-      			</td>
-      			<td>
-      				{{message.date}}
-      			</td>
-      			<td>
-      				{{message.text}}
-      			</td>
-    		</tr>
-    		<tr>
-      			<td>
-      				<img src="./assets/user.ico">
-      			</td>
-      			<td>
-      				Alina
-      			</td>
-      			<td>
-      				28.04.2018 21:53
-      			</td>
-      			<td>
-      				Hi!!! I am Alina!!!
-      			</td>
-    		</tr>
-  </table>
+<div class="row">
+	<div class="chat_window">
+    <div class="top_menu">
+      <div class="buttons">
+        <div class="button close"></div>
+        <div class="button minimize"></div>
+        <div class="button maximize">
+        </div>
+      </div>
+      <div class="title">Chat</div>
+    </div>
+    <ul class="messages">
+    </ul>
+    <div class="bottom_wrapper clearfix">
+      <div class="message_input_wrapper">
+        <input class="message_input" placeholder="Type your message here..." [(ngModel)]=message.message /></div>
+        <div class="send_message">
+          <div class="icon"></div>
+          <div class="text"  (click)="addMessage()">Send</div>
+    </div>
+  </div>
 </div>
-	<textarea id="box"></textarea>
-	<button id="send" (click)="add(box.value); box.value=''">Send</button>
+<div class="message_template">
+  <li *ngFor="let message of messages" class="message">
+  <div class="avatar"></div>
+  <div class="text_wrapper">
+    <div class="text">{{message.message}}</div>
+  </div>
+</li>
 </div>
-
+</div>
