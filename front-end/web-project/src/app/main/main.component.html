@@ -1,22 +1,21 @@
  <div class="row">
     <div class="col-sm-6">
-    	<form (ngSubmit)="f.form.valid && submit()" #f="ngForm" novalidate>
-	<img #image src="./assets/empty.jpg" alt=""  width="250" height="250" class="image"><br>
-	<input type="file" name="image" accept="image/jpeg,image/png,image/gif,image/jpg" (change)="imageChoosed($event)">
+    	<form>
+			<img #image src="./assets/empty.jpg" alt=""  width="250" height="250" class="image"><br>
+			<input type="file" name="image" accept="image/jpeg,image/png,image/gif,image/jpg" (change)="imageChoosed($event)">
 		<h3>Settings</h3>
-		Size: x:<input type="number" name="x" min="100" max="1000" [(ngModel)]="form.size.x" #x="ngModel">
-		y:<input type="number" name="y" min="100" max="1000" [(ngModel)]="form.size.y" #y="ngModel"><br>
-		Number of colors: <input type="number" name="colors" min="1" max="100" [(ngModel)]="form.colors" #colors="ngModel"><br>
-		Filter: <select name="filter">
+			Size: x:<input type="number" name="x" min="100" max="1000" [(ngModel)]="picture.settings.x">
+		y:<input type="number" name="y" min="100" max="1000" [(ngModel)]="picture.settings.y"><br>
+		Number of colors: <input type="number" name="colors" min="1" max="100" [(ngModel)]="picture.settings.colors"><br>
+		Filter: <select name="filter" [(ngModel)]="picture.settings.filter">
 			<option name="filter" value="no">No filters</option>
 			<option name="filter" value="filter1">Filter1</option>
 			</select><br>
-			Smootching: <input type="number" name="smootching" min="0" max="100">%
-			<button type="submit">DO</button>
+			<button (click)="sendPicture()">DO</button>
 		</form>
     </div>
     <div class="col-sm-6">
-    	<img #imageResult src="./assets/empty.jpg" alt=""  width="250" height="250" class="image">
+    	 <img src="data:image/jpg;base64,{{resultImage.image}}"> 
     	<button (click)="MyController">Uplaod</button>
     </div>
   </div>

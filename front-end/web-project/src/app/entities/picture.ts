@@ -4,5 +4,5 @@ export class Picture{
 	image:string;
 	x:number;
 	y:number;
-	settings:Setting;
+	settings:Setting=new Setting();
 }

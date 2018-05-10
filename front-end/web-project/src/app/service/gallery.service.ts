@@ -32,12 +32,6 @@ export class GalleryService {
     return this.http.get<Object>(url);
   }
 
-   /** POST: add a new perfume to the server */
-  addPicture (image: Object): Observable<Object> {
-    const url = this.galleryUrl+'/new';
-    return this.http.post<Object>(url, image, httpOptions);
-  }
-
   /**
    * Handle Http operation that failed.
    * Let the app continue.

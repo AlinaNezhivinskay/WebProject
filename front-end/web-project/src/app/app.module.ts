@@ -13,6 +13,7 @@ import { GalleryComponent }   from './gallery/gallery.component';
 
 import { ChatService } from './service/chat.service';
 import { GalleryService } from './service/gallery.service';
+import { ImageService } from './service/image.server';
 
 import { MatButtonModule, MatCheckboxModule, MatInputModule, MatButtonToggleModule, MatIconModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -36,7 +37,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         MatInputModule,
         MatCheckboxModule
   ],
-  providers: [ChatService,GalleryService],
+  providers: [ChatService,GalleryService,ImageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
