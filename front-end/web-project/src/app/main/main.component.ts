@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ViewChild } from '@angular/core';
 
-import {ImageService} from '../service/image.server';
+import {ImageService} from '../service/image.service';
 
 import  { Picture } from '../entities/picture';
 import  { Image } from '../entities/image';

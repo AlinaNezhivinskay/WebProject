@@ -1,21 +1,11 @@
 <h2>Gallery</h2>
-	<div>
-		<label>Category:</label>
-		 <select>
-    	<option>
-    		Animal
-    	</option>
-    </select>
-	</div><br>
 	<table class="gallery">
   			<td *ngFor="let picture of pictures">
-  				<a routerLink="/picture_detail/{{picture.id}}">
-  					<img src="data:image/jpg;base64,{{picture.image}}">	
-				</a>
+          <a download="image.jpg" href="data:image/jpg;base64,{{picture.image}}" title="Download">
+  					<img src="data:image/jpg;base64,{{picture.image}}" width="150" height="150">	
+          </a>
   			</td>
   			<td>
-  				<a routerLink="/picture_detail/{{picture.id}}">
-  					<img src="data:image/jpg;base64,{{picture.image}}">	
-				</a>
+  					<img src="data:image/jpg;base64,{{picture.image}}" width="100" height="100">	
   			</td>
 	</table>

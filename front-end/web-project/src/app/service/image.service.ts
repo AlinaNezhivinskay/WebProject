@@ -5,28 +5,25 @@ import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import { catchError, map, tap } from 'rxjs/operators';
 
+import  { Picture } from '../entities/picture';
+import  { Image } from '../entities/image';
+
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
 
 @Injectable()
-export class ChatService {
+export class ImageService {
 
-  private perfumeUrl = '';  
+  private imageUrl = 'http://localhost:8999';
 
   constructor(
     private http: HttpClient) { }
 
-  /** GET perfumes from the server */
-  getMessages (): Observable<Object[]> {
-     const url = this.perfumeUrl+'/all';
-    return this.http.get<Object[]>(url);
-  }
-
-   /** POST: add a new perfume to the server */
-  addMessage (message: Object): Observable<Object> {
-    const url = this.perfumeUrl+'/new';
-    return this.http.post<Object>(url, message, httpOptions);
+     /** POST: add a new perfume to the server */
+  sendPicture (picture: Picture): Observable<Image> {
+    const url = this.imageUrl+'/picture';
+    return this.http.post<Image>(url, JSON.stringify(picture), httpOptions);
   }
 
   /**

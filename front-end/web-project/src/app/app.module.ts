@@ -8,36 +8,24 @@ import { AppRoutingModule }     from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { MainComponent }         from './main/main.component';
-import { ChatComponent }         from './chat/chat.component';
 import { GalleryComponent }   from './gallery/gallery.component';
 
-import { ChatService } from './service/chat.service';
 import { GalleryService } from './service/gallery.service';
-import { ImageService } from './service/image.server';
-
-import { MatButtonModule, MatCheckboxModule, MatInputModule, MatButtonToggleModule, MatIconModule } from '@angular/material';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ImageService } from './service/image.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
-    ChatComponent,
     GalleryComponent
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
-        MatButtonModule,
-        MatButtonToggleModule,
-        MatIconModule,
-        MatInputModule,
-        MatCheckboxModule
   ],
-  providers: [ChatService,GalleryService,ImageService],
+  providers: [GalleryService,ImageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
