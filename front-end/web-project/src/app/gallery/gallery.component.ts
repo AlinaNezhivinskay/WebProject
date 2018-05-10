@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import { GalleryService } from '../service/gallery.service';
+import { Image } from '../entities/image';
 
 
 @Component({
@@ -9,7 +10,7 @@ import { GalleryService } from '../service/gallery.service';
   styleUrls: ['./gallery.component.css']
 })
 export class GalleryComponent {
-   pictures:Object[];
+   pictures:Image[];
 
   constructor(private galleryService: GalleryService) { }
 

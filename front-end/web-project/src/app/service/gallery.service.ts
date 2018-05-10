@@ -5,6 +5,9 @@ import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import { catchError, map, tap } from 'rxjs/operators';
 
+import { Image } from '../entities/image';
+
+
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
@@ -12,15 +15,15 @@ const httpOptions = {
 @Injectable()
 export class GalleryService {
 
-  private galleryUrl = '';  
+  private galleryUrl = 'http://localhost:8999';  
 
   constructor(
     private http: HttpClient) { }
 
   /** GET perfumes from the server */
-  getPictures (): Observable<Object[]> {
-     const url = this.galleryUrl+'/all';
-    return this.http.get<Object[]>(url);
+  getPictures (): Observable<Image[]> {
+     const url = this.galleryUrl+'/gallery';
+     return this.http.get<Image[]>(url);
   }
 
    /** GET perfumes from the server */
